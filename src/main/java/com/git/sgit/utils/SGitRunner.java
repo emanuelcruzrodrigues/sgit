@@ -43,8 +43,7 @@ public class SGitRunner {
 
 	private String getStartCommand() {
 		if (SystemUtils.IS_OS_WINDOWS) return "cmd";
-		if (SystemUtils.IS_OS_LINUX) return "/bin/bash";
-		throw new RuntimeException("Your OS is not supported");
+		return "/bin/bash";
 	}
 
 	private void run(BufferedWriter prompt, String command) throws IOException {
